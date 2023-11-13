@@ -24,9 +24,6 @@ def on_press(key):
 def on_release(key):
     pass
 
-    # Stop the listener if the 'esc' key is pressed
-    if key == keyboard.Key.esc:
-        return False
 
 def remove_last_character():
     with open(output_file, "r") as file:
